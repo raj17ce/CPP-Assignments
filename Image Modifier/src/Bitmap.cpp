@@ -1,4 +1,5 @@
 #include "../include/Bitmap.h"
+#include <execution>
 
 bool Bitmap::readData() {
 	std::ifstream file(path.lexically_normal(), std::ios::binary);
@@ -57,43 +58,43 @@ bool Bitmap::writeData(std::filesystem::path outputPath) {
 }
 
 bool Bitmap::swapRedAndBlueChannel(std::filesystem::path outputPath) {
-	for (auto& pixel : pixels) {
+	std::for_each(std::execution::par, pixels.begin(), pixels.end(), [](auto& pixel) {
 		auto& [blue, green, red] = pixel;
 		std::swap(blue, red);
-	}
+		});
 	writeData(outputPath);
 	readData();
 	return true;
 }
 
 bool Bitmap::onlyRedChannel(std::filesystem::path outputPath) {
-	for (auto& pixel : pixels) {
+	std::for_each(std::execution::par, pixels.begin(), pixels.end(), [](auto& pixel) {
 		auto& [blue, green, red] = pixel;
 		blue = 0;
 		green = 0;
-	}
+		});
 	writeData(outputPath);
 	readData();
 	return true;
 }
 
 bool Bitmap::onlyGreenChannel(std::filesystem::path outputPath) {
-	for (auto& pixel : pixels) {
+	std::for_each(std::execution::par, pixels.begin(), pixels.end(), [](auto& pixel) {
 		auto& [blue, green, red] = pixel;
 		blue = 0;
 		red = 0;
-	}
+		});
 	writeData(outputPath);
 	readData();
 	return true;
 }
 
 bool Bitmap::onlyBlueChannel(std::filesystem::path outputPath) {
-	for (auto& pixel : pixels) {
+	std::for_each(std::execution::par, pixels.begin(), pixels.end(), [](auto& pixel) {
 		auto& [blue, green, red] = pixel;
 		red = 0;
 		green = 0;
-	}
+		});
 	writeData(outputPath);
 	readData();
 	return true;
