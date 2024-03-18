@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structure", "Structure\Stru
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Complex", "Complex\Complex.vcxproj", "{943C5508-C6DE-4319-A57E-1C095617CC37}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image Modifier", "Image Modifier\Image Modifier.vcxproj", "{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{943C5508-C6DE-4319-A57E-1C095617CC37}.Release|x64.Build.0 = Release|x64
 		{943C5508-C6DE-4319-A57E-1C095617CC37}.Release|x86.ActiveCfg = Release|Win32
 		{943C5508-C6DE-4319-A57E-1C095617CC37}.Release|x86.Build.0 = Release|Win32
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Debug|x64.ActiveCfg = Debug|x64
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Debug|x64.Build.0 = Debug|x64
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Debug|x86.ActiveCfg = Debug|Win32
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Debug|x86.Build.0 = Debug|Win32
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Release|x64.ActiveCfg = Release|x64
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Release|x64.Build.0 = Release|x64
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Release|x86.ActiveCfg = Release|Win32
+		{34D9CA7C-4E7D-4107-A5F7-AE1CAB3BD43E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
